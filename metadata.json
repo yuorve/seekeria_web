@@ -1,0 +1,6 @@
+{
+  "name": "SeekerIA — AI Job Discovery Agent",
+  "description": "SeekerIA is an AI-powered job discovery agent that monitors Danish tech opportunities, evaluates relevance and delivers personalized signals through Telegram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
