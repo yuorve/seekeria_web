@@ -29,8 +29,7 @@ import {
   FileText,
   Workflow,
   Menu,
-  X,
-  Download
+  X
 } from 'lucide-react';
 import SeekerIALogo from './components/SeekerIALogo.tsx';
 
@@ -405,16 +404,6 @@ export default function App() {
           {/* Zone 3: Primary Action & Controls */}
           <div className="flex items-center gap-2.5">
             <a
-              href="/seekeria_single_file.html"
-              download="seekeria_landing.html"
-              className="hidden lg:inline-flex items-center gap-1.5 rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-2 text-xs font-mono text-slate-300 hover:text-white hover:border-slate-700 transition-colors whitespace-nowrap"
-              title="Download standalone single-file HTML version"
-            >
-              <Download className="h-3.5 w-3.5 text-slate-400" />
-              <span>Standalone HTML</span>
-            </a>
-
-            <a
               href="https://t.me/SeekerIA_bot"
               target="_blank"
               rel="noopener noreferrer"
@@ -458,16 +447,6 @@ export default function App() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-2">
-              <a
-                href="/seekeria_single_file.html"
-                download="seekeria_landing.html"
-                className="flex items-center justify-center gap-2 rounded-lg border border-slate-800 bg-slate-900 py-2.5 text-xs font-mono text-slate-300"
-              >
-                <Download className="h-3.5 w-3.5" />
-                <span>Download Standalone HTML</span>
-              </a>
-            </div>
           </div>
         )}
       </header>
