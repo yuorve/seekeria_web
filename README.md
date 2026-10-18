@@ -62,8 +62,7 @@ Only the public presentation layer is maintained here.
 
 ## Related project
 
-The AI agent, data ingestion and matching engine will be maintained separately:  
-→ yuorve/seekeria
+The AI agent, data ingestion and matching engine will be maintained separately.
 
 ## Note
 
