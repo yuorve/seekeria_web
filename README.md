@@ -1,4 +1,4 @@
-# SeekerIA Web
+# SeekerIA
 
 SeekerIA is a personal AI project exploring autonomous job discovery, semantic matching and automation for the Danish tech market.
 
