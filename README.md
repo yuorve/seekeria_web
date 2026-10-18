@@ -10,32 +10,55 @@ The agent, data ingestion, matching logic and automation infrastructure are main
 
 The website presents the project's architecture, workflow, features and technical approach.
 
-## Stack
+## ⚙️ Technology
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Lucide React
-- Motion
+SeekerIA is built as a modular AI-powered automation system.
 
-## Run locally
+The public website represents only the presentation layer. The underlying agent and automation infrastructure are maintained separately.
 
-```bash
-npm install
-npm run dev
+### Agent Pipeline
+
+```text
+Job Sources
+    ↓
+Ingestion & Extraction
+    ↓
+Normalization
+    ↓
+Deduplication
+    ↓
+Semantic Matching
+    ↓
+Geographic Filtering
+    ↓
+AI Analysis & Scoring
+    ↓
+Telegram Delivery
 ```
 
-## Build for production
+### Core Technologies
 
-```bash
-npm run build
-```
+- Python — data ingestion, processing and automation
+- Web scraping & APIs — collecting job opportunities from multiple sources
+- Semantic matching — comparing job requirements with candidate profiles
+- AI / LLMs — analysing opportunities and generating personalized insights
+- Geospatial filtering — location and radius-based opportunity matching
+- Telegram Bot API — delivering prioritized opportunities and notifications
+- Docker — reproducible deployment and isolated services
+- Automation — scheduled monitoring and processing workflows
 
-## Demo
+### Engineering Approach
 
-🌐 https://seekeria.yuryoropeza.com/  
-🤖 Telegram: @SeekerIA_bot
+SeekerIA follows a modular architecture designed to separate:
+
+- data collection
+- data processing
+- matching and scoring
+- AI reasoning
+- notification and user interaction
+
+The production implementation is not included in this repository.
+Only the public presentation layer is maintained here.
 
 ## Related project
 
