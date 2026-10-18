@@ -78,6 +78,12 @@
     <span id="toast-text">Copied to clipboard</span>
   </div>
 
+  <!-- Top Demonstrative Disclaimer Bar -->
+  <div class="border-b border-amber-500/30 bg-amber-950/60 px-4 py-2 text-center text-xs font-mono text-amber-200 backdrop-blur-sm">
+    <span class="font-bold uppercase tracking-wider text-amber-400 mr-2">Demonstrative Preview:</span>
+    <span>All data, job listings, company names, match scores, and telemetry on this website are illustrative simulations and do not represent real-time vacancies or real companies.</span>
+  </div>
+
   <!-- Top Bar Contract -->
   <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -173,7 +179,7 @@
                   <p class="text-[11px] text-slate-400">Monitoring Danish Tech Market</p>
                 </div>
               </div>
-              <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400">Example result</span>
+              <span class="text-[10px] uppercase font-mono font-semibold tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded">Demo Data · Not Real</span>
             </div>
 
             <div class="rounded-xl border border-slate-800 bg-slate-950/70 p-4 space-y-3.5">
@@ -186,9 +192,10 @@
               </div>
 
               <div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-amber-400 mb-0.5">[Demonstrative Simulation]</div>
                 <h2 class="text-base font-bold text-white">Backend Developer</h2>
                 <div class="flex items-center gap-2 text-xs text-slate-400 mt-0.5">
-                  <span>Example Company</span>
+                  <span>Example Company (Simulated Entity)</span>
                   <span>·</span>
                   <span class="flex items-center gap-1 text-slate-300">
                     <svg class="h-3 w-3 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -451,9 +458,21 @@ Delivering to your Telegram stream...</div>
 
   <!-- Footer -->
   <footer class="bg-slate-950 py-10 text-slate-400 text-xs">
-    <div class="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 SeekerIA. An independent AI / automation project.</div>
-      <div class="font-mono text-slate-400">Built as an experiment in AI, automation, data engineering and software development.</div>
+    <div class="mx-auto max-w-7xl px-4 space-y-6">
+      <!-- Explicit Demonstrative Data Notice -->
+      <div class="rounded-xl border border-amber-500/30 bg-amber-950/20 p-4 text-[11px] text-slate-300 leading-relaxed font-mono">
+        <div class="text-amber-400 font-bold mb-1 uppercase tracking-wider text-xs">
+          Explicit Demonstrative Disclaimer
+        </div>
+        <p class="text-slate-400">
+          All data, job titles, technical fit percentages, commute calculations, company names, and outreach text presented on this website are strictly demonstrative simulations for software architecture and portfolio preview. They do not constitute actual employment advertisements, live scraped listings, or real hiring vacancies.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+        <div>© 2026 SeekerIA. An independent AI / automation project.</div>
+        <div class="font-mono text-slate-400">Built as an experiment in AI, automation, data engineering and software development.</div>
+      </div>
     </div>
   </footer>
 

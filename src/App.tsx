@@ -29,7 +29,8 @@ import {
   FileText,
   Workflow,
   Menu,
-  X
+  X,
+  AlertTriangle
 } from 'lucide-react';
 import SeekerIALogo from './components/SeekerIALogo.tsx';
 
@@ -119,7 +120,7 @@ const SAMPLE_JOBS: JobExample[] = [
   {
     id: 'job-1',
     role: 'Backend Developer (Python / APIs)',
-    company: 'Nordic HealthTech ApS',
+    company: 'Nordic HealthTech ApS (Simulated Entity)',
     location: '3400 Hillerød · Greater Copenhagen',
     postcode: '3400',
     source: 'Jobindex / Direct ATS',
@@ -131,12 +132,12 @@ const SAMPLE_JOBS: JobExample[] = [
     reasoning:
       'Strong alignment with Python API and containerization preferences. Office located in Hillerød, well within the 25km radius. English-speaking engineering team with modern continuous deployment pipeline.',
     outreachDraftPreview:
-      'Hej [Hiring Manager],\n\nJeg så jeres opslag vedrørende Backend Developer hos Nordic HealthTech. Med min erfaring inden for Python (FastAPI), Docker og cloud-baserede databaser, passer min profil stærkt til jeres backend-arkitektur. Jeg er baseret lokalt i Hillerød og vil med glæde høre mere om jeres nuværende udfordringer...',
+      '[SIMULATED OUTREACH DRAFT]\n\nHej [Hiring Manager],\n\nJeg så jeres opslag vedrørende Backend Developer hos Nordic HealthTech. Med min erfaring inden for Python (FastAPI), Docker og cloud-baserede databaser, passer min profil stærkt til jeres backend-arkitektur. Jeg er baseret lokalt i Hillerød og vil med glæde høre mere om jeres nuværende udfordringer...',
   },
   {
     id: 'job-2',
     role: 'DevOps & Cloud Engineer',
-    company: 'Fintech Velocity A/S',
+    company: 'Fintech Velocity A/S (Simulated Entity)',
     location: '2800 Kgs. Lyngby · Greater Copenhagen',
     postcode: '2800',
     source: 'The Hub',
@@ -148,12 +149,12 @@ const SAMPLE_JOBS: JobExample[] = [
     reasoning:
       'Significant match for automation and cloud infrastructure. Hybrid policy allows 3 days remote. Located in Lyngby near DTU Science Park, within the 25km radius from 3400.',
     outreachDraftPreview:
-      'Hi [Engineering Team],\n\nI noticed your opening for a DevOps & Cloud Engineer at Fintech Velocity. Given your emphasis on automated Terraform workflows and container orchestration, I believe my background in reproducible infrastructure and Python automation could add immediate value...',
+      '[SIMULATED OUTREACH DRAFT]\n\nHi [Engineering Team],\n\nI noticed your opening for a DevOps & Cloud Engineer at Fintech Velocity. Given your emphasis on automated Terraform workflows and container orchestration, I believe my background in reproducible infrastructure and Python automation could add immediate value...',
   },
   {
     id: 'job-3',
     role: 'Software Engineer (Data & Automation)',
-    company: 'GreenEnergy Analytics',
+    company: 'GreenEnergy Analytics (Simulated Entity)',
     location: '2750 Ballerup · Greater Copenhagen',
     postcode: '2750',
     source: 'Jobnet',
@@ -358,6 +359,17 @@ export default function App() {
         </div>
       )}
 
+      {/* Top Demonstrative Disclaimer Bar */}
+      <div className="border-b border-amber-500/30 bg-amber-950/60 px-4 py-2 text-center text-xs font-mono text-amber-200 backdrop-blur-sm">
+        <span className="inline-flex items-center gap-1.5 font-bold uppercase tracking-wider text-amber-400 mr-2">
+          <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+          Demonstrative Preview:
+        </span>
+        <span>
+          All data, job listings, company names, match scores, and telemetry on this website are illustrative simulations and do not represent real-time vacancies or real companies.
+        </span>
+      </div>
+
       {/* TOP BAR CONTRACT: Zone 1 (Brand single text), Zone 2 (4-6 nav links), Zone 3 (Action button) */}
       <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -543,8 +555,8 @@ export default function App() {
                       <p className="text-[11px] text-slate-400">Monitoring Danish Tech Market</p>
                     </div>
                   </div>
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400">
-                    Example result
+                  <span className="text-[10px] uppercase font-mono font-semibold tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded">
+                    Demo Data · Not Real
                   </span>
                 </div>
 
@@ -560,9 +572,12 @@ export default function App() {
                   </div>
 
                   <div>
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-amber-400 mb-0.5">
+                      [Demonstrative Simulation]
+                    </div>
                     <h2 className="text-base font-bold text-white">Backend Developer</h2>
                     <div className="flex items-center gap-2 text-xs text-slate-400 mt-0.5">
-                      <span>Example Company</span>
+                      <span>Example Company (Simulated Entity)</span>
                       <span aria-hidden="true">·</span>
                       <span className="flex items-center gap-1 text-slate-300">
                         <MapPin className="h-3 w-3 text-sky-400" />
@@ -638,11 +653,14 @@ export default function App() {
 
                 {/* Footer simulation hint */}
                 <div className="mt-3 flex items-center justify-between text-[11px] text-slate-400 px-1">
-                  <span>Source: Jobindex / ATS feed</span>
+                  <span>Source: Jobindex / ATS (Simulated model)</span>
                   <span className="flex items-center gap-1 text-slate-300">
                     <MapPin className="h-3 w-3 text-emerald-400" />
                     Commute: ~4 km
                   </span>
+                </div>
+                <div className="mt-2 text-center text-[10px] font-mono text-amber-300/80 bg-amber-950/40 rounded py-1 px-2 border border-amber-500/20">
+                  * Demonstrative simulation. Fictional company & synthetic fit score.
                 </div>
               </div>
             </div>
@@ -1181,7 +1199,7 @@ export default function App() {
 
                 {/* Simulator Footer disclaimer */}
                 <div className="border-t border-slate-800 bg-slate-900/40 p-3 text-center text-[11px] text-slate-400">
-                  <span>Note: This is an illustrative browser simulation.</span>
+                  <span className="text-amber-300 font-medium">Demonstrative Simulation:</span> All queries return synthetic mock data for architecture demonstration.
                   <a
                     href="https://t.me/SeekerIA_bot"
                     target="_blank"
@@ -1208,13 +1226,16 @@ export default function App() {
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-2 mb-3">
                 See the Agent's Output
               </h2>
-              <p className="text-sm sm:text-base text-slate-400 max-w-2xl">
+              <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
                 Representative examples illustrating how opportunities are analyzed, scored, and
-                contextualized for Danish tech professionals.
+                contextualized. All job listings, metrics, and company entities below are{' '}
+                <strong className="text-amber-300 font-medium">strictly demonstrative simulations</strong>{' '}
+                and do not represent real-world active vacancies.
               </p>
             </div>
-            <span className="inline-block px-3 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-400">
-              Illustrative examples · Anonymized tech roles
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono text-amber-300 font-medium whitespace-nowrap">
+              <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+              <span>Demonstrative Data Only · Not Real Vacancies</span>
             </span>
           </div>
 
@@ -1235,7 +1256,9 @@ export default function App() {
                       <Zap className="h-3.5 w-3.5" />
                       <span>MATCH {job.score}/100</span>
                     </div>
-                    <span className="text-[11px] text-slate-400 font-mono">{job.published}</span>
+                    <span className="text-[10px] font-mono font-medium text-amber-400/90 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                      Simulated
+                    </span>
                   </div>
 
                   <h3 className="text-lg font-bold text-white mb-1">{job.role}</h3>
@@ -1653,12 +1676,12 @@ export default function App() {
                 </a>
                 <span className="mx-2">·</span>
                 <a
-                  href="https://seekeria.yoropeza.workers.dev/"
+                  href="https://seekeria.yuryoropeza.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Live Deployment
+                  seekeria.yuryoropeza.com
                 </a>
               </div>
             </div>
@@ -1691,6 +1714,17 @@ export default function App() {
                 Telegram
               </a>
             </nav>
+          </div>
+
+          {/* Explicit Demonstrative Data Notice */}
+          <div className="mt-8 rounded-xl border border-amber-500/30 bg-amber-950/20 p-4 text-[11px] text-slate-300 leading-relaxed font-mono">
+            <div className="flex items-center gap-2 text-amber-400 font-bold mb-1.5 uppercase tracking-wider text-xs">
+              <AlertTriangle className="h-4 w-4 shrink-0" />
+              <span>Explicit Demonstrative Disclaimer</span>
+            </div>
+            <p className="text-slate-400">
+              All data, job titles, technical specifications, match scores (0–100), commute estimations, company names, and outreach text presented on this website are strictly demonstrative simulations engineered for software architecture and portfolio showcase. They do not constitute actual employment advertisements, live scraped listings, or real hiring vacancies.
+            </p>
           </div>
 
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400">
