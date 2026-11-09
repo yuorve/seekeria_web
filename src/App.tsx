@@ -338,7 +338,7 @@ export default function App() {
         setSimOutput(found.output);
       } else {
         setSimOutput(
-          `Command recognized: "${cmdText}". In the live agent, this updates your session parameters. Run real bot on Telegram: @SeekerIA_bot`
+          `[DEMO SIMULATOR]\nSimulated echo for: "${cmdText}".\n⚠️ This web simulator does not execute real bot operations or connect to live backends.\nTo interact with the live agent and configure real search parameters, open @SeekerIA_bot directly in Telegram.`
         );
       }
       setIsSimulating(false);
@@ -1080,10 +1080,14 @@ export default function App() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-2 mb-3">
               Control the Agent From Telegram
             </h2>
-            <p className="text-sm sm:text-base text-slate-400">
-              Configure your search radius, target technologies, and trigger immediate sweeps
-              without leaving Telegram. Test the simulated commands below or click to copy.
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-3">
+              Explore the command schema used to calibrate the agent. The interactive box below is a{' '}
+              <strong className="text-amber-300 font-medium">frontend demo simulator</strong> that illustrates expected bot outputs — it does not execute real-world searches, modify database state, or trigger live background processes.
             </p>
+            <div className="inline-flex items-center gap-2 rounded-lg border border-amber-500/30 bg-amber-950/30 px-3 py-1.5 text-xs font-mono text-amber-300">
+              <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+              <span>Web Simulator: DEMO Only · No Real Commands Are Executed Here</span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -1102,7 +1106,7 @@ export default function App() {
                         onClick={() => handleRunCommand(item.example)}
                         className="text-[11px] font-mono text-slate-400 hover:text-white underline decoration-slate-700 underline-offset-2 ml-2"
                       >
-                        [Run in demo]
+                        [Simulate in demo]
                       </button>
                     </div>
                     <button
@@ -1146,21 +1150,28 @@ export default function App() {
                       <span>SeekerIA Terminal Simulator</span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono text-amber-400/90 uppercase tracking-wider">
-                    Interactive Demo
+                  <span className="text-[10px] font-mono font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded uppercase tracking-wider">
+                    SIMULATION DEMO · NOT LIVE
                   </span>
+                </div>
+
+                {/* Explicit Demo Alert Bar Inside Terminal */}
+                <div className="border-b border-amber-500/20 bg-amber-950/40 px-3.5 py-1.5 text-[11px] font-mono text-amber-200/90 flex items-center gap-1.5">
+                  <AlertTriangle className="h-3 w-3 text-amber-400 shrink-0" />
+                  <span>Interactive UI Demo: No real commands or backend calls are executed.</span>
                 </div>
 
                 {/* Terminal Content */}
                 <div className="p-4 font-mono text-xs space-y-4 min-h-[300px]">
-                  <div className="text-slate-400 text-[11px]">
-                    # Welcome to SeekerIA Telegram command preview
-                    <br /># Click any command on the left or test below:
+                  <div className="text-slate-400 text-[11px] leading-relaxed">
+                    # SeekerIA Telegram command preview [DEMO MODE]
+                    <br /># Output is synthetic and intended solely for UI exploration.
+                    <br /># Click any command on the left or test simulated quick inputs below:
                   </div>
 
                   {/* Input line */}
                   <div className="flex items-center gap-2 text-emerald-400">
-                    <span className="text-slate-400">user@telegram:~$</span>
+                    <span className="text-slate-400">demo@telegram:~$</span>
                     <span className="text-white font-bold">{simInput}</span>
                   </div>
 
@@ -1178,7 +1189,7 @@ export default function App() {
                   {/* Interactive Quick buttons inside terminal */}
                   <div className="pt-2">
                     <div className="text-[11px] text-slate-400 mb-2">
-                      Try quick actions in simulation:
+                      Test simulated responses (sample queries):
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {['/hunt', '/address 3400', '/radius 25', '/keywords python, fastapi'].map(
@@ -1198,16 +1209,21 @@ export default function App() {
                 </div>
 
                 {/* Simulator Footer disclaimer */}
-                <div className="border-t border-slate-800 bg-slate-900/40 p-3 text-center text-[11px] text-slate-400">
-                  <span className="text-amber-300 font-medium">Demonstrative Simulation:</span> All queries return synthetic mock data for architecture demonstration.
-                  <a
-                    href="https://t.me/SeekerIA_bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-emerald-400 hover:underline font-semibold ml-1.5"
-                  >
-                    Open real bot @SeekerIA_bot →
-                  </a>
+                <div className="border-t border-slate-800 bg-slate-900/40 p-3 text-center text-[11px] text-slate-400 leading-normal">
+                  <div className="text-amber-300 font-medium">
+                    ⚠️ UI Simulation Only: This browser terminal does not run real code or scrape live Danish job portals.
+                  </div>
+                  <div className="mt-1">
+                    To execute real commands and monitor opportunities, use the real bot on Telegram:
+                    <a
+                      href="https://t.me/SeekerIA_bot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 hover:underline font-semibold ml-1.5 whitespace-nowrap"
+                    >
+                      @SeekerIA_bot →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
