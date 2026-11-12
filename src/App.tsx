@@ -1692,12 +1692,12 @@ export default function App() {
                 </a>
                 <span className="mx-2">·</span>
                 <a
-                  href="https://seekeria.yuryoropeza.com/"
+                  href="https://seekeria.lovincode.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  seekeria.yuryoropeza.com
+                  seekeria.lovincode.com
                 </a>
               </div>
             </div>

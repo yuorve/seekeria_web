@@ -3,7 +3,7 @@
 SeekerIA is a personal AI project exploring autonomous job discovery, semantic matching and automation for the Danish tech market.
 
 Official website for **SeekerIA**, an AI-powered job discovery and matching system focused on the Danish technology market:  
-🌐 [https://seekeria.yuryoropeza.com/](https://seekeria.yuryoropeza.com/)
+🌐 [https://seekeria.lovincode.com/](https://seekeria.lovincode.com/)
 
 This repository contains the public presentation layer of the project.
 
@@ -63,7 +63,7 @@ Only the public presentation layer is maintained here.
 
 ## 🌐 Links
 
-- **Website:** [https://seekeria.yuryoropeza.com/](https://seekeria.yuryoropeza.com/)
+- **Website:** [https://seekeria.lovincode.com/](https://seekeria.lovincode.com/)
 - **Telegram Bot:** [@SeekerIA_bot](https://t.me/SeekerIA_bot)
 
 ## Related project
